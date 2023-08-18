@@ -19,13 +19,13 @@ except:
 # Load Config
 def loadConfig():
     global config
-    with open(path.join(path.dirname(__file__),'config.json')) as f:
+    with open(path.join(path.dirname(__file__),'config','config.json')) as f:
         config = load(f)
 
 # Load prompt
 def loadPrompt():
     global prompt
-    with open(path.join(path.dirname(__file__),'prompt.txt')) as f:
+    with open(path.join(path.dirname(__file__),'config','prompt.txt')) as f:
         prompt = f.read()
 
 # AI
