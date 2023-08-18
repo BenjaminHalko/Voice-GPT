@@ -9,6 +9,7 @@ const audioHistory = [];
 input.setAttribute("style", "height:" + Math.max(input.scrollHeight - 10, 28) + "px;overflow-y:hidden;");
 input.addEventListener("input", OnInput, false);
 input.addEventListener("change", OnInput, false);
+window.addEventListener("resize", OnInput, false);
 
 function OnInput() {
     input.style.height = 0;
