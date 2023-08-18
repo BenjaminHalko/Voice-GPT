@@ -1,0 +1,193 @@
+body::before {
+    background: radial-gradient(circle at calc(50% + 241px) calc(50% + 0px),hsla(229, 100%, 15%, 2%) 0,hsla(229, 100%, 15%, 0) 206px),radial-gradient(circle at calc(50% + 440px) calc(50% + 638px),hsla(195, 100%, 15%, 30%) 0,hsla(195, 100%, 15%, 0) 299px),radial-gradient(circle at calc(50% - 106px) calc(50% + 190px),hsla(258, 100%, 15%, 58%) 0,hsla(258, 100%, 15%, 0) 381px),radial-gradient(circle at calc(50% - 218px) calc(50% + 57px),hsla(231, 100%, 15%, 86%) 0,hsla(231, 100%, 15%, 0) 446px),radial-gradient(circle at calc(50% - 442px) calc(50% - 176px),hsla(269, 100%, 15%, 100%) 0,hsla(269, 100%, 15%, 0) 487px),radial-gradient(circle at calc(50% + 74px) calc(50% - 265px),hsla(235, 100%, 15%, 100%) 0,hsla(235, 100%, 15%, 0) 500px),radial-gradient(circle at calc(50% + 365px) calc(50% - 30px),hsla(201, 100%, 15%, 100%) 0,hsla(201, 100%, 15%, 0) 483px),radial-gradient(circle at calc(50% + 206px) calc(50% + 117px),hsla(275, 100%, 15%, 82%) 0,hsla(275, 100%, 15%, 0) 439px),radial-gradient(circle at calc(50% - 211px) calc(50% + 741px),hsla(259, 100%, 15%, 54%) 0,hsla(259, 100%, 15%, 0) 371px),radial-gradient(circle at calc(50% - 175px) calc(50% + 21px),hsla(262, 100%, 15%, 26%) 0,hsla(262, 100%, 15%, 0) 287px),black;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+body {
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+
+    height: 100vh;
+    margin: 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.panel {
+    position: relative;
+    padding: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: large;
+    margin: 20px;
+    margin-top: 0px;
+
+    background: #ffffff0a;
+	box-shadow: 0 15px 15px #0000004d;
+	border-bottom: 1px solid #ffffff1a;
+	border-top: 1px solid #ffffff1a;
+	border-radius: 30px;
+}
+
+.message {
+    display: flex;
+}
+
+.message > p {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    word-break: break-word;
+    white-space: normal;
+    width: 100%;
+}
+
+.profile {
+    fill: white;
+    margin-right: 10px;
+}
+
+.audiobutton {
+    border: none;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: 0px;
+    margin-top: 5px;
+    margin-bottom: auto;
+}
+
+.audiobutton > svg {
+    transition: all 0.2s ease;
+    fill: white;
+}
+
+.audiobutton:hover > svg {
+    fill: white;
+    transform: scale(1.2);
+}
+
+.audiobutton:active > svg {
+    fill: #c6c6c6;
+    transform: scale(0.95);
+}
+
+#messagebox-wrapper {
+    margin-top: 20px;
+
+    border-radius: 30px;
+
+    max-width: 1000px;
+    width: 100%;
+    height: 100%;
+
+    overflow-y: hidden;
+}
+
+#messagebox {
+    background-color: #00000050;
+
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+
+    scrollbar-color: #00000050 #111111;
+}
+#messagebox::-webkit-scrollbar {
+        width: 14px;
+}
+#messagebox::-webkit-scrollbar-track {
+    background: #00000050;
+}
+#messagebox::-webkit-scrollbar-thumb {
+    background-color: #00000050;
+    border-radius: 20px;
+}
+
+#messagebox > .panel:first-child {
+    margin-top: 20px;
+}
+
+#form-panel {
+    display: flex;
+    gap: 16px;
+
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 20px;
+    padding: 20px;
+
+    border: none;
+}
+
+#messageinput {
+    border-radius: 10px;
+    width: 100%;
+    height: 0px;
+    resize: none;
+
+
+    border: none;
+    background-color: #00000050;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    padding-bottom: 0px;
+
+    margin: 0px;
+}
+
+#submit {
+    transition: background-color 0.2s ease;
+
+    border-radius: 10px;
+    border: none;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    color: white;
+    background: #008f43;
+    
+    padding: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#submit:hover {
+    background: #00ff77;
+}
+
+#submit > svg {
+    transition: fill 0.2s ease;
+    fill: #e5ffd5
+}
+
+#submit:hover > svg {
+    fill: white;
+}
+
+#submit:disabled {
+    background: #4d4d4d;
+}
+
+#submit:disabled > svg {
+    fill: #6d6d6d;
+}
