@@ -10,9 +10,10 @@ try:
     set_api_key(environ.get('ELEVENLABS_API_KEY'))
     openai.api_key = environ.get('OPENAI_API_KEY')
 except:
-    print('Keys not found!')
-    print('Please set the environment variables within \'.flaskcfg\':')
-    print('ELEVENLABS_API_KEY, OPENAI_API_KEY')
+    print('~ Keys not found! ~')
+    print('1. Make sure you run \'flask run\' from the root directory.')
+    print('2. Please set the environment variables within \'.flaskcfg\':')
+    print('   ELEVENLABS_API_KEY, OPENAI_API_KEY')
     exit(1)
 
 # Load Config
